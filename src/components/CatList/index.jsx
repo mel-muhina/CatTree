@@ -1,5 +1,5 @@
 import React from "react";
-import {useCat} from "../contexts"
+import { useCat } from "../../contexts";
 
 export default function CatList({ratingOrder, breedOnly, setRatingOrder, setBreedOnly}) {
   const {catData} = useCat();
