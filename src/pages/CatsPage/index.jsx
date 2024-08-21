@@ -1,7 +1,11 @@
-import React from 'react'
+import { CatCard, CatGallery } from '../../components'
 
 export default function CatsPage() {
   return (
-    <div>index</div>
+    
+    <>
+        <h1>Our Current Cats Page</h1>
+        <CatGallery />
+    </>
   )
 }

@@ -1,0 +1,13 @@
+.catCardImg {
+    height: 40vh;
+    border-radius: 5%;
+    padding: 1vh;
+}
+
+.cat-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
