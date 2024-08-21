@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
-import {SearchForm, CatList} from "..";
+import SearchForm from "../SearchForm";
+import CatList from "../CatList";
 import {useCat} from "../../contexts";
 
 export default function SearchWidget() {

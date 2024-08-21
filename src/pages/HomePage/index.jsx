@@ -1,10 +1,8 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import SearchWidget from "./SearchWidget";
+import SearchWidget from "../../components/SearchWidget";
 
-export default HomePage = () => {
-
-
+export default function HomePage() {
   return (
     <main>
       <h1>CatTree</h1>

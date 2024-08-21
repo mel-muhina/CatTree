@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-export default function SearchWidget({handleSearch, lastSearch}) {
+export default function SearchForm({handleSearch, lastSearch}) {
   const [inputValue, setInputValue] = useState("");
 
   function handleInput(e) {
