@@ -1,0 +1,28 @@
+.cat-card {
+    background-color: rgb(66, 77, 77);
+    padding: 5%;
+    margin: 1vh;
+    border-radius: 5px;
+}
+ul {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+}
+
+li {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.cat-card-text {
+    padding: 1%;
+
+}
+
+p {
+    padding: 0;
+    margin: 0px;
+}
