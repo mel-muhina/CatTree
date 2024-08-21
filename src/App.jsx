@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { CatPage, CatsPage, NotFoundPage, SearchPage, HomePage } from './pages'
+import {Routes, Route} from 'react-router-dom'
+import Nav from './layouts/Nav'
 import './App.css'
 
 function App() {
@@ -7,11 +9,17 @@ function App() {
 
   return (
     <>
-      <HomePage />
-      <CatsPage />
-      <CatPage />
-      <NotFoundPage />
-      <SearchPage />
+     <Routes>
+        <Route path="" element={<Nav />}>
+          <Route index element={<HomePage />} />
+          <Route path="/cats">
+            <Route index element={<CatsPage />} />
+            <Route path="*" element={<CatPage />} />
+          </Route>
+          <Route path="search" element={<SearchPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
     </>
   )
 }
