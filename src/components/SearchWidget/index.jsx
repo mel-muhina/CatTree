@@ -10,7 +10,7 @@ export default function SearchWidget() {
   useEffect(() => {
     async function searchAPI() {
       try {
-        const response = await fetch(`https://api.thecatapi.com/v1/breeds/search?q=${searchString}`);
+        const response = await fetch(`https://api.thecatapi.com/v1/images/search?limit=20&breed_ids=${searchString}`);
         const rawData = await response.json();
         setCatData(rawData);
       } catch (error) {
