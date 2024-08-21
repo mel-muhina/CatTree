@@ -1,22 +1,22 @@
 import React from "react";
-import { useCat } from "../../contexts";
+import {CatCard} from "../";
+import {useCat} from "../../contexts";
 
-export default function CatList({ratingOrder, breedOnly, setRatingOrder, setBreedOnly}) {
+export default function CatList({breedOnly, setBreedOnly}) {
   const {catData} = useCat();
-
-  const filteredData = catData
-    .filter((cat) => !breedOnly || cat.breed)
 
   return (
     <div>
-      <button onClick={() => setBreedOnly(!breedOnly)}>Breeds Only</button>
-      <ul>
-        {filteredData.map((cat) => (
-          <li key={cat.id}>
-            {cat.name} - {cat.breed_group} ({cat.origin})
-          </li>
-        ))}
-      </ul>
+      <h1>Cat List</h1>
+      {catData.length > 0 ? (
+        catData
+          .filter((cat) => cat.description && cat.url) 
+          .map((cat) => (
+            <CatCard key={cat.id} cat={cat} />
+          ))
+      ) : (
+        <p>No cats found.</p>
+      )}
     </div>
   );
 }
