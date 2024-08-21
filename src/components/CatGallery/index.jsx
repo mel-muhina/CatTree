@@ -17,8 +17,7 @@ export default function CatGallery() {
     }, [])
 
     async function getCats() {
-        const hiddenApi = "https://api.thecatapi.com/v1/images/search?limit=30&api_key=live_gfQNGADb522pBj4pARmpFnCa1CrQQrTG1yA03h0U4MI27yZiTsl4k3mqwXa3BOdU"
-        const apiByBreed = "https://api.thecatapi.com/v1/images/search?limit=20&breed_ids=beng&api_key=live_gfQNGADb522pBj4pARmpFnCa1CrQQrTG1yA03h0U4MI27yZiTsl4k3mqwXa3BOdU"
+   
         const api = "https://api.thecatapi.com/v1/images/search?limit=10"
         const response = await fetch(hiddenApi)
         const data = await response.json();
@@ -26,7 +25,7 @@ export default function CatGallery() {
         // const filterData = data.filter(cat => !cat.url.endsWith('.gif'))
         // const filterData = data.filter(cat => !cat.breeds)
         setCatData(filterData)
-
+        // comment
     }
 
     // console.log("cat id", cat.id)
