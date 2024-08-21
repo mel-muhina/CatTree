@@ -4,16 +4,18 @@ import CatList from "../CatList";
 import {useCat} from "../../contexts";
 
 export default function SearchWidget() {
-  const [breedOnly, setBreedOnly] = useState(false);
-
-  const {setCatData} = useCat();
   const [searchString, setSearchString] = useState("Siamese");
+  const {setCatData, catData} = useCat();
 
   useEffect(() => {
     async function searchAPI() {
-      const response = await fetch(`https://api.thecatapi.com/v1/breeds/search?q=${searchString}`);
-      const rawData = await response.json();
-      setCatData(rawData);
+      try {
+        const response = await fetch(`https://api.thecatapi.com/v1/breeds/search?q=${searchString}`);
+        const rawData = await response.json();
+        setCatData(rawData);
+      } catch (error) {
+        console.error("Fetching cat data failed:", error);
+      }
     }
 
     searchAPI();
@@ -24,9 +26,9 @@ export default function SearchWidget() {
   }
 
   return (
-    <>
+    <div>
       <SearchForm handleSearch={handleSearch} lastSearch={searchString} />
-      {<CatList breedOnly={breedOnly} setBreedOnly={setBreedOnly} />}
-    </>
+      <CatList catData={catData} />
+    </div>
   );
 }
