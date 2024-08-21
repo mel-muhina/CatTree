@@ -13,10 +13,9 @@ export default function CatGallery() {
     }, [])
 
     async function getCats() {
-
-     
+        
         const api = "https://api.thecatapi.com/v1/images/search?limit=10"
-        const response = await fetch(api)
+        const response = await fetch(hiddenApi)
         const data = await response.json();
         const filterData = data.filter(cat => cat.breeds[0]?.name)
         // const filterData = data.filter(cat => !cat.url.endsWith('.gif'))
