@@ -5,10 +5,18 @@ import {useCat} from "../../contexts";
 export default function CatList({breedOnly, setBreedOnly}) {
   const {catData} = useCat();
 
-  function renderCats() {
-    return catData
-    //   .filter((cat) => (cat.description && cat.image ? true : false))
-    //   .map((cat) => <CatCard key={cat.id} cat={cat} />);
-  }
-  return <div>{renderCats()}</div>;
+  return (
+    <div>
+      <h1>Cat List</h1>
+      {catData.length > 0 ? (
+        catData
+          .filter((cat) => cat.description && cat.url) 
+          .map((cat) => (
+            <CatCard key={cat.id} cat={cat} />
+          ))
+      ) : (
+        <p>No cats found.</p>
+      )}
+    </div>
+  );
 }
