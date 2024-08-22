@@ -1,7 +1,8 @@
-import React, {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Redirect.css";
 
-export default function SearchForm({lastSearch}) {
+export default function SearchForm({ lastSearch }) {
   const [inputValue, setInputValue] = useState("");
   const navigate = useNavigate();
 
@@ -17,9 +18,16 @@ export default function SearchForm({lastSearch}) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" onChange={handleInput} placeholder={lastSearch || "Search for a breed"} value={inputValue} required />
-      <input type="submit" value="Search" />
+    <form onSubmit={handleSubmit} className="redirect">
+      <input
+        type="text"
+        onChange={handleInput}
+        placeholder={lastSearch || "Search for a breed"}
+        value={inputValue}
+        required
+        className="redirect-search"
+      />
+      <input type="submit" value="Search" className="redirect-btn" />
     </form>
   );
 }

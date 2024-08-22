@@ -20,6 +20,8 @@ export default function CatCard({ cat }) {
     starRatingEner();
     starRatingInt();
     starRatingHypo();
+
+    console.log("I am bob");
   }, [cat]);
 
   async function getCatNames() {
@@ -191,7 +193,7 @@ export default function CatCard({ cat }) {
         <h2 className="title">
           {catName} - {catAge} years old
         </h2>
-        <CatImg className="cat-img" cat={cat} />
+        <CatImg className="cat-img-cat" cat={cat} />
         <div className="cat-card-text">
           <h3>Breed: {cat.breeds[0]?.name}</h3>
           <ul>

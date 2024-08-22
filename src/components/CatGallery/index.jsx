@@ -36,7 +36,7 @@ export default function CatGallery() {
     <>
       <div className="cat-gallery">
         {catData.map((cat) => (
-          <div key={cat.breeds[0].id}>
+          <div key={cat.breeds[0].id} className="each-cat-img">
             <Link to={`/cats/${cat.breeds[0].id}`}>
               <CatImg cat={cat} />
             </Link>
