@@ -3,11 +3,9 @@ import { Link } from "react-router-dom";
 import SearchWidget from "../../components/SearchWidget";
 import Redirect from "../../components/Redirect";
 import "./HomePage.css";
+import catBg from "../../assets/catbg.webp";
 
 export default function HomePage() {
-  const catBg =
-    "https://r2.erweima.ai/imgcompressed/img/compressed_6c6f36ca44f10528334315d40c584f5f.webp";
-
   return (
     <main className="homepage">
       <h1 className="homepage-h1">Cat Tree</h1>
