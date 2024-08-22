@@ -1,0 +1,11 @@
+.navigation {
+  margin-top: 0;
+}
+.nav-links {
+  gap: 10%;
+  justify-content: center;
+}
+
+li > a {
+  color: rgb(240, 128, 128);
+}
