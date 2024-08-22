@@ -2,6 +2,7 @@ import CatImg from "../CatImg"
 import { useState, useEffect } from "react";
 import './CatCard.css'
 
+
 export default function CatCard({ cat }) {    
     const [catName, setCatName ] = useState([]);
     const [catAge, setCatAge ] = useState([]);
@@ -31,8 +32,6 @@ export default function CatCard({ cat }) {
  
     }
 
-    console.log(cat.breeds[0])
-
   return (
     <>  
         <div className="cat-card" key={cat.id}>
@@ -50,7 +49,7 @@ export default function CatCard({ cat }) {
                 </ul>
                      <p>{cat.breeds[0]?.description}</p>
             </div>
-            
+             
         </div>
     </>
   )

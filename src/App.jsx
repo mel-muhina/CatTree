@@ -14,7 +14,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/cats">
             <Route index element={<CatsPage />} />
-            <Route path="*" element={<CatPage />} />
+            <Route path=":id" element={<CatPage />} />
           </Route>
           <Route path="search" element={<SearchPage />} />
           <Route path="*" element={<NotFoundPage />} />
