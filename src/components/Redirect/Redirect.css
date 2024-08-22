@@ -1,0 +1,21 @@
+.redirect-search {
+  margin-top: 1%;
+  font-size: 1.3rem;
+  border-radius: 4px;
+  border-color: rgba(210, 129, 104, 0.8);
+}
+
+.redirect-btn {
+  font-size: 1.3rem;
+  border-radius: 4px;
+  padding: 0.4vh 2vh;
+  margin-left: 1%;
+  border: none;
+  box-shadow: 0px 2px 2px rgba(70, 18, 18, 0.6);
+  background-color: rgb(254, 188, 188);
+}
+
+.redirect-btn:hover {
+  background-color: rgb(240, 128, 128);
+  cursor: pointer;
+}

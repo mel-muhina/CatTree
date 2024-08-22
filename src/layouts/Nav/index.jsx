@@ -12,7 +12,7 @@ export default function Nav() {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/cats">Cats Avaliable</NavLink>
+            <NavLink to="/cats">Available Cats</NavLink>
           </li>
           <li>
             <NavLink to="/search">Search Cats</NavLink>

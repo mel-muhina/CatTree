@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import "./SearchForm.css";
 
-
-export default function SearchForm({handleSearch, lastSearch}) {
+export default function SearchForm({ handleSearch, lastSearch }) {
   const [inputValue, setInputValue] = useState("");
 
   function handleInput(e) {
@@ -17,8 +17,15 @@ export default function SearchForm({handleSearch, lastSearch}) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" onChange={handleInput} placeholder={lastSearch || "Search for a breed"} value={inputValue} required />
-      <input type="submit" value="Search" />
+      <input
+        type="text"
+        onChange={handleInput}
+        placeholder={lastSearch || "Search for a breed"}
+        value={inputValue}
+        required
+        className="redirect-search"
+      />
+      <input type="submit" value="Search" className="redirect-btn" />
     </form>
   );
 }

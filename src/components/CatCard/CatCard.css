@@ -12,6 +12,10 @@ ul {
   gap: 1%;
 }
 
+.cat-card > .cat-img-cat {
+  width: 100vh;
+}
+
 li {
   list-style: none;
   padding: 0px;
