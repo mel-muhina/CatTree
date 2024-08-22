@@ -1,7 +1,10 @@
 import React from 'react'
+import { CatList, SearchWidget } from '../../components'
 
 export default function SearchPage() {
   return (
-    <div>index</div>
-  )
+    <>
+      <SearchWidget />
+    </>
+  );
 }
