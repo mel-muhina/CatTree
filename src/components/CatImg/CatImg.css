@@ -1,0 +1,13 @@
+.catCardImg {
+  height: 35vh;
+  width: 50vh;
+  object-fit: cover;
+  object-position: top;
+  background-color: rgba(237, 111, 111, 0.3);
+  height: 40vh;
+  border-radius: 10px;
+  padding: 0.5vh;
+  box-shadow: 0px 5px 5px rgba(70, 18, 18, 0.2);
+  /* border: 1px black; */
+  /* background-color: rgba(237, 111, 111, 0.5); */
+}

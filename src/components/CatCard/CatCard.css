@@ -1,0 +1,49 @@
+.cat-card {
+  background-color: rgba(249, 202, 161, 0.8);
+  padding: 2% 5%;
+  margin: 3%;
+  margin-top: 0;
+  border-radius: 4px;
+}
+ul {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+}
+
+.cat-card > .cat-img-cat {
+  width: 100vh;
+}
+
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.cat-card-text {
+  padding: 0% 3%;
+}
+
+p {
+  padding: 0;
+  margin: 0px;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.subtitle {
+  font-weight: 700;
+}
+
+.star {
+  color: rgb(237, 111, 111);
+}
+
+.description {
+  font-size: 1.2rem;
+}
