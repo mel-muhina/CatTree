@@ -7,10 +7,11 @@ import { CatPage } from "../../pages";
 import { useCat } from "../../contexts";
 import { useParams } from "react-router-dom";
 
+
 export default function CatGallery() {
   const { id } = useParams();
   const { catData, setCatData } = useCat();
-  // const [catData, setCatData ] = useState([]);
+  const apiKey = import.meta.env.VITE_API_KEY;
 
   useEffect(() => {
     getCats();
@@ -18,17 +19,10 @@ export default function CatGallery() {
 
   async function getCats() {
     const hiddenApi =
-      "https://api.thecatapi.com/v1/images/search?limit=20&has_breeds=1&api_key=live_gfQNGADb522pBj4pARmpFnCa1CrQQrTG1yA03h0U4MI27yZiTsl4k3mqwXa3BOdU";
-    const apiByBreed =
-      "https://api.thecatapi.com/v1/images/search?limit=20&breed_ids=beng&api_key=live_gfQNGADb522pBj4pARmpFnCa1CrQQrTG1yA03h0U4MI27yZiTsl4k3mqwXa3BOdU";
+      `https://api.thecatapi.com/v1/images/search?limit=20&has_breeds=1&api_key=${apiKey}`;
     const api = "https://api.thecatapi.com/v1/images/search?limit=10";
     const response = await fetch(hiddenApi);
     const data = await response.json();
-    // const filterData = data.filter(
-    //   (cat) => cat.breeds[0] && cat.breeds[0].name
-    // );
-    // const filterData = data.filter(cat => !cat.url.endsWith('.gif'))
-    // const filterData = data.filter(cat => !cat.breeds)
     setCatData(data);
   }
 
@@ -40,8 +34,6 @@ export default function CatGallery() {
             <Link to={`/cats/${cat.breeds[0].id}`}>
               <CatImg cat={cat} />
             </Link>
-            {/* <CatPage cat={cat} /> */}
-            {/* <CatCard cat={cat} /> */}
           </div>
         ))}
       </div>

@@ -20,8 +20,6 @@ export default function CatCard({ cat }) {
     starRatingEner();
     starRatingInt();
     starRatingHypo();
-
-    console.log("I am bob");
   }, [cat]);
 
   async function getCatNames() {

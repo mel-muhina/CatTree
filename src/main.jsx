@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import { CatProvider } from "./contexts/index.jsx";
 import { BrowserRouter } from "react-router-dom";
+// require('dotenv').config();
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
